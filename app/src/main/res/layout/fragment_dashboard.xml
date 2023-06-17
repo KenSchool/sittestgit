@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </FrameLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground">
+
+            <ProgressBar
+                android:id="@+id/progressBarCircle"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/drawable_circle_dark_blue"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="100"
+                android:progressDrawable="@drawable/drawable_circle_yellow"
+                android:rotation="-90" />
+
+            <EditText
+                android:id="@+id/editTextMinute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="500dp"
+                android:gravity="center"
+                android:hint="@string/hint_minute"
+                android:inputType="number"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:minEms="5"
+                android:text="1"
+                android:textColor="@color/colorPink"
+                android:textColorHint="@color/colorPink" />
+
+            <TextView
+                android:id="@+id/textViewTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="540dp"
+                android:text="00:01:00"
+                android:textColor="@color/colorPink"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageViewReset"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="540dp"
+                android:onClick="onClick"
+                android:src="@drawable/icon_reset"
+                android:tag="@drawable/icon_reset"
+                android:contentDescription="@string/reset_icon_description" />
+
+            <ImageView
+                android:id="@+id/imageViewStartStop"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="540dp"
+                android:onClick="onClick"
+                android:src="@drawable/icon_start"
+                android:tag="@drawable/icon_start"
+                android:contentDescription="@string/start_stop_icon_description" />
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="86dp"
+                android:text="@string/logout" />
+
+
+            <TextView
+                android:id="@+id/txV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="175dp"
+                android:layout_marginRight="200dp"
+                android:text="TextView" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:menu="@menu/bottom_nav_menu">
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</FrameLayout>
